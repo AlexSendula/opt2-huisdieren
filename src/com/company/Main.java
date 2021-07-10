@@ -25,16 +25,16 @@ public class Main {
             System.out.println("3.  Afsluiten");
 
             Scanner scanner = new Scanner(System.in);
-            int keuze = scanner.nextInt();
-            scanner.nextLine();
+            String keuze = scanner.nextLine();
 
             switch (keuze) {
-                case 1 -> julia.nieuwHuisdier();
-                case 2 -> julia.overzichtHuisdieren();
-                case 3 -> {
+                case "1" -> julia.nieuwHuisdier();
+                case "2" -> julia.overzichtHuisdieren();
+                case "3" -> {
                     System.out.println("Doei");
                     System.exit(0);
                 }
+                default -> System.out.println("Probeer het opnieuw.");
             }
         }
     }

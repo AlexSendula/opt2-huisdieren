@@ -28,6 +28,11 @@ public class Eigenaar {
         System.out.println("Welk soort huisdier? (Slang, Vis, Hond, Kat)");
         String soort = scanner.nextLine();
 
+        if (soortChecker(soort) == null) {
+            System.out.println("Probeer het opnieuw.");
+            return;
+        }
+
         System.out.println("Naam?");
         String naam = scanner.nextLine();
 
@@ -105,6 +110,11 @@ public class Eigenaar {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welk soort huisdier? (Slang, Vis, Hond, Kat)");
         String soort = scanner.nextLine();
+
+        if (soortChecker(soort) == null) {
+            System.out.println("Probeer het opnieuw.");
+            return;
+        }
 
         loopHuisdieren(soort);
     }
